@@ -1,4 +1,4 @@
-﻿var state = false;
+var state = false;
 var hide1 = document.getElementById("fa");
 var hide2 = document.getElementById("fa1");
 function toggle() {
@@ -65,20 +65,20 @@ function validation() {
         form.classList.add("valid")
         form.classList.remove("invalid")
         text.innerHTML = "Your Email Address in Valid.";
-        text.style.color = "#00ff00";
+        text.style.color = "rgba("+0+","+255+","+0+",0.5)";
         document.getElementById("user").removeAttribute("disabled");
     }
     else {
         form.classList.remove("valid")
         form.classList.add("invalid")
         text.innerHTML = "Please Enter Valid Email Address";
-        text.style.color = "#ff0000";
+        text.style.color = "rgba("+255+","+0+","+0+",0.5)";
     }
     if (email == "") {
         form.classList.remove("valid")
         form.classList.remove("invalid")
         text.innerHTML = "Fill your Email Address.";
-        text.style.color = "#ff0000";
+        text.style.color = "rgba("+255+","+0+","+0+",0.5)";
     }
 }
 
@@ -88,36 +88,36 @@ function validation_user() {
     var text = document.getElementById("text2");
     var correct_way = /^[A-Za-z]+$/;
     var x = "";
-    if (user == "") {
+    if (user != "") {
         form.classList.remove("valid")
         form.classList.add("invalid")
         text.innerHTML = "Fill your user";
-        text.style.color = "#ff0000";
+        text.style.color = "rgba("+255+","+0+","+0+",0.5)";
     }
     if (user.match(correct_way)) {
         form.classList.add("valid")
         form.classList.remove("invalid")
         text.innerHTML = "User is correct.";
-        text.style.color = "#00ff00";
+        text.style.color = "rgba("+0+","+255+","+0+",0.5)";
         document.getElementById("password").removeAttribute("disabled");
     }
     if (user.length<3) {
         form.classList.remove("valid")
         form.classList.add("invalid")
         text.innerHTML = "User length must be longer than 3 letters";
-        text.style.color = "#ff0000";
+        text.style.color = "rgba("+255+","+0+","+0+",0.5)";
     }
     if (user.length>=12) {
         form.classList.remove("valid")
         form.classList.add("invalid")
         text.innerHTML = "User length cannot be longer than 12 letters";
-        text.style.color = "#ff0000";
+        text.style.color = "rgba("+255+","+0+","+0+",0.5)";
     }
     if (user!=user.match(correct_way)) {
         form.classList.remove("valid")
         form.classList.add("invalid")
         text.innerHTML = "Only alphabets are allowed!";
-        text.style.color = "#ff0000";
+        text.style.color = "rgba("+255+","+0+","+0+",0.5)";
     }
 }
 
